@@ -1,0 +1,503 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 2000px;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Start Variables */
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+ul {
+    list-style: none;
+}
+
+/* Strart Header  */
+header {
+    background-color: rgb(41, 50, 60);
+
+}
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: #ddd 200ms linear;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 540px;
+    font-size: 22px;
+}
+header li {
+    margin-left: 25px;
+}
+header li a {
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 21px;
+}
+header li a:hover {
+    color: crimson;
+}
+header nav {
+    margin-bottom: -20px;
+    margin-right: 15px;
+    letter-spacing: 1px;
+}
+.logo {
+    margin-bottom: -40px;
+}
+header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+}
+header h2 {
+    margin-bottom: -10px;
+    margin-top: 10px;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: #fff
+}
+
+/* End Header  */
+/* Start Section */
+.section {
+    background-image: url('imges/man.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 30px;
+}
+.section::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: 1;
+}
+.section h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 14px;
+}
+.main {
+    padding: 130px 70px;
+    width: 40%;
+    position: relative;
+    z-index: 2;
+}
+ .main .Portfolio {
+    background: none;
+    padding: 20px 60px;
+    border-radius: 10px;
+    border: crimson 2px solid;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: system-ui;
+    margin-top: 10px;
+}
+.main .Portfolio:hover {
+    background-color: crimson;
+    cursor: pointer;
+}
+span {
+    color: crimson;
+}
+/* END Section */
+/* Start Servies */
+.servies {
+    padding-top: 120px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+@media (max-width:1000px) {
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0 auto;
+        /* max-width: 1350px; */
+    }
+    .servies .servies-top {
+        width: 70% !important;
+    }
+    .servies .servies-bottom {
+        flex-direction: column !important;
+    }
+    .recent .main-card .thetwo-card {
+        min-width: 770px !important;
+        max-width: 800px;
+        margin: auto !important;
+    }
+    .about .left-side {
+        width: 50%;
+    }
+    .contact .card {
+        padding: 25px 30px 25px 7px !important;
+    }
+}
+/* End Media */
+
+/* Start Servies */
+.servies .servies-top {
+    width: 39%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.servies .servies-top h2 {
+    padding-bottom: 15px;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 100;
+    color: #000000;
+    font-family: system-ui;
+}
+.servies .servies-top span {
+    color:#ff0000;
+}
+.servies .servies-top p {
+    line-height: 1.7;
+    color: #00000087;
+        font-family: -webkit-pictograph;
+}
+/*  */
+.servies .servies-bottom {
+    display:flex;
+    margin-top: 65px;
+
+}
+.servies .servies-bottom .card{
+    background-image: url('./imges/card-img.jpg');
+    height: 380px;
+    margin: 20px;
+    flex-basis: 23%;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    padding: 27px 22px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.servies .servies-bottom .card:after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background: #29323c;
+    opacity: .82;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.servies .servies-bottom .card img{
+    width: 80px;
+    background-size: cover;
+}
+.servies .card h2 {
+    margin-top: 20px;
+  
+}
+.servies .card p { 
+     text-align: start;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* End Servies */
+/* Start recent */
+.recent {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+.recent .container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+.recent .project-info::after,
+.recent .project-img::after{
+    content: " ";
+    /* background-color: #352c2c31; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+}
+.recent h2 {
+    text-align: center;
+    margin: 90px 0 40px 0;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 100;
+    color: #000000;
+    font-family: system-ui;
+}
+.recent .main-card {
+    margin-bottom: 200px;
+}
+.recent .main-card .thetwo-card{
+    display: flex;
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+}
+.recent .main-card .project-info{
+    width: 50%;
+    color: #fff;
+    background-color: #485563;
+    padding: 80px 30px;
+    position:relative;
+    z-index:21
+}
+.recent .main-card .thetwo-card:hover .project-img{
+    transform: scale(1.2);   
+    transition: .9s all;
+  }
+
+.recent .main-card .project-img{
+    width: 600px;
+    position: relative
+}
+.recent .main-card .project-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.recent .main-card .project-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity:.8;
+    z-index: 2;
+}
+.recent .main-card .project-info h3 {
+    font-size: 40px;
+    margin-bottom: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.recent .main-card .project-info h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+.recent .main-card .project-info p{
+    line-height: 1.4;
+    opacity: .9;
+}
+
+/* End recent */
+/* Start About Me  */
+
+.about .right-side {
+    width: 400px;
+    height: 600px;
+    padding-left: 80px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+.about .right-side .img {position: relative;
+}
+.about .right-side img {
+    height: 380px;
+    width: 320px;
+    object-fit: cover;
+    border: 10px #fff solid;
+}
+.about .right-side .img::after {
+    content: "";
+    position: absolute;
+    right: 28px;
+    top: 20px;
+    height: 95%;
+    width: 92%;
+    border: 10px crimson solid;
+    z-index: -1; 
+}
+.about .left-side{
+    width: 60%;
+}
+.flex-card {
+    display: flex;
+}
+.about .left-side h2 {
+    font-size: 60px;
+    font-weight: 100;
+    font-family: emoji;
+    color: #000000de;
+    margin-bottom: 12px;
+    margin-top: -4px;
+    letter-spacing: 3px;
+}
+.about span {color:crimson}
+.about .left-side h4 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about .left-side p {
+    color: #0000007d;
+    line-height: 1.7;
+    font-size: 16px;
+    width: 98%;
+}
+.resume {
+    padding: 7px 25px;
+    border: crimson 2px solid;
+    background: none;
+    font-size: 20px;
+    color: #000000d1;
+    font-family: system-ui;
+    margin-top: 30px;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+.resume:hover {
+    background:crimson;
+    cursor: pointer;
+    color:#fff
+}
+/* End About */
+/* Start ConTact */
+   
+.contact h2 {
+    font-size: 60px;
+    font-weight: 100;
+    font-family: emoji;
+    color: #000000de;
+    margin-top: -4px;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.contact .card-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.contact .card {
+    display: flex;
+    padding: 50px 130px 50px 15px;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    border-radius: 12px;
+}
+.card .text {
+    line-height: .8;
+    margin-top: 10px;
+    color: #000000ad;
+    font-size: 19px;
+    padding-left: 30px;
+}
+.card img {width: 73px; margin-left: 20px;}
+
+/* End Contact */
+/* Start Footer */
+.footer{
+    background-image: linear-gradient(60deg, #192838 0%, #05080a 100%);
+    height: 270px;
+    text-align: center;
+}
+
+.footer .final span {
+    color:crimson;
+}
+.footer h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+    padding-top: 40px;
+}
+.footer h5{
+    color: #ffffffe6;
+    font-size: 22px;
+    margin-bottom: 10px;
+}  
+.footer .imges {
+    margin-bottom: 20px;
+}
+.footer img {
+    width: 50px;
+}
+.footer p {
+    color :#ffffffe6;
+    font-size: 16px;
+
+}
+/* End Footer */
+div#Contact {
+    margin-bottom: 80px;
+}
+.link {
+    color: #8bc34a;
+    text-decoration: none;
+    display: block;
+    border:2px solid #8bc34a;
+    margin:20px auto;
+    position:relative;
+    width: 160px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    overflow: hidden;
+}
+.link:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.link span {
+    display: block;
+    transition: 0.3s;
+}
+.link:hover:before {
+    transform: translateX(0);
+}
+.link:hover span {
+    transform: translateX(100%);
+} 
+/* End The Site */
